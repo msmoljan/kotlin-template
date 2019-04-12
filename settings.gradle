@@ -1,2 +1,4 @@
 include ':app', ':api', ':base'
 include ':domain'
+include ':presentation'
+include ':data'

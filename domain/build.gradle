@@ -3,12 +3,11 @@ import dk.template.buildsrc.Libs
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation project(path: ':base')
-    implementation project(path: ':api')
-    implementation Libs.Kotlin.stdlib
-    implementation Libs.Dagger.dagger
-    implementation Libs.RxJava.rxJava
-    implementation Libs.Coroutines.core
-    implementation Libs.AndroidX.Paging.common
+    implementation project(':base')
+    implementation project(':data')
+    implementation project(':api')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    implementation "com.google.dagger:dagger-android:${versions.dagger}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     implementation Libs.Retrofit.retrofit
 }
