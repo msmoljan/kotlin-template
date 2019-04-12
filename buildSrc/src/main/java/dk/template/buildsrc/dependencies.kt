@@ -5,7 +5,7 @@ object Versions {
 }
 
 object Libs {
-    const val androidGradlePlugin = "com.android.tools.build:gradle:3.3.2"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:3.5.0-alpha10"
 
     const val timber = "com.jakewharton.timber:timber:4.7.1"
     const val junit = "junit:junit:4.12"
@@ -43,14 +43,14 @@ object Libs {
     }
 
     object Kotlin {
-        private const val version = "1.3.21"
+        private const val version = "1.3.30"
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version"
         const val reflect = "org.jetbrains.kotlin:kotlin-reflect:$version"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
     }
 
     object Coroutines {
-        private const val version = "1.1.1"
+        private const val version = "1.2.0-alpha-2"
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
@@ -104,7 +104,7 @@ object Libs {
     }
 
     object OkHttp {
-        private const val version = "3.12.1"
+        private const val version = "3.14.1"
         const val okhttp = "com.squareup.okhttp3:okhttp:$version"
         const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
     }

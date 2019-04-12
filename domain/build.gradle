@@ -6,8 +6,8 @@ dependencies {
     implementation project(':base')
     implementation project(':data')
     implementation project(':api')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
-    implementation "com.google.dagger:dagger-android:${versions.dagger}"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+    implementation Libs.Kotlin.stdlib
+    implementation Libs.Dagger.dagger
+    implementation Libs.Coroutines.core
     implementation Libs.Retrofit.retrofit
 }

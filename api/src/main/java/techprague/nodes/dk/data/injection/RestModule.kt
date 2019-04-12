@@ -50,12 +50,12 @@ class RestModule {
     @Provides
     fun provideOkhttpClient(@Named("API_KEY") apiKey: String): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor { chain ->
-                var request = chain.request()
-                val url = request.url().newBuilder().addQueryParameter("api_key", apiKey).build()
-                request = request.newBuilder().url(url).build()
-                chain.proceed(request)
-            }
+//            .addInterceptor { chain ->
+//                var request = chain.request()
+//                val url = request.url().newBuilder().addQueryParameter("api_key", apiKey).build()
+//                request = request.newBuilder().url(url).build()
+//                chain.proceed(request)
+//            }
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
             })

@@ -1,3 +1,5 @@
+import dk.template.buildsrc.Libs
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -9,6 +11,11 @@ android {
     compileSdkVersion sdks.compileSdkVersion
     buildToolsVersion sdks.buildToolsVersion
     flavorDimensions "default"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         applicationId "dk.nodes.template"
@@ -98,6 +105,7 @@ dependencies {
     implementation project(':domain')
     implementation project(':presentation')
     implementation project(':data')
+    implementation project(path: ':api')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "org.jetbrains.kotlin:kotlin-reflect:${versions.kotlin}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
@@ -156,5 +164,4 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:${versions.lifecycle}"
     kapt "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}"
     implementation "androidx.core:core-ktx:${versions.ktx}"
-    compile project(path: ':api')
 }
