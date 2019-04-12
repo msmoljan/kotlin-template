@@ -4,8 +4,9 @@ import android.content.Context
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
-import dk.nodes.template.network.rest.Api
-import dk.nodes.template.network.rest.RestPostRepository
+import dk.nodes.template.network.Api
+import dk.nodes.template.network.RestPostRepository
+import dk.nodes.template.repositories.PostRepository
 import javax.inject.Singleton
 
 @Module
@@ -16,7 +17,7 @@ class RestRepositoryModule {
         api: Api,
         gson: Gson,
         context: Context
-    ): dk.nodes.template.domain.repositories.PostRepository {
+    ): PostRepository {
         return RestPostRepository(api)
     }
 }

@@ -21,7 +21,7 @@ interface MatchesApi {
     /**
      * GET /matches/{match_id}
      * Match data
-     * @param matchId  (required)
+     * @param matchId (required)
      * @return Call&lt;Inline_response_200&gt;
      */
     @GET("matches/{match_id}")

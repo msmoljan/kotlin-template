@@ -30,7 +30,7 @@ interface RequestApi {
     /**
      * POST /request/{match_id}
      * Submit a new parse request
-     * @param matchId  (required)
+     * @param matchId (required)
      * @return Call&lt;Any&gt;
      */
     @POST("/request/{match_id}")

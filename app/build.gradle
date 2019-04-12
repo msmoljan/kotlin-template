@@ -17,6 +17,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    packagingOptions {
+        pickFirst("META-INF/atomicfu.kotlin_module")
+    }
+
     defaultConfig {
         applicationId "dk.nodes.template"
         minSdkVersion sdks.minSdkVersion
@@ -105,6 +109,7 @@ dependencies {
     implementation project(':domain')
     implementation project(':presentation')
     implementation project(':data')
+    implementation project(':base')
     implementation project(path: ':api')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "org.jetbrains.kotlin:kotlin-reflect:${versions.kotlin}"
@@ -158,10 +163,11 @@ dependencies {
     implementation 'androidx.arch.core:core-runtime:2.1.0-alpha01'
     implementation "androidx.lifecycle:lifecycle-livedata-core:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-runtime:${versions.lifecycle}"
-    implementation "androidx.lifecycle:lifecycle-common:${versions.lifecycle}"
+    implementation Libs.AndroidX.Lifecycle.common
     implementation "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-viewmodel:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-livedata:${versions.lifecycle}"
     kapt "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}"
+    implementation Libs.moshi
     implementation "androidx.core:core-ktx:${versions.ktx}"
 }

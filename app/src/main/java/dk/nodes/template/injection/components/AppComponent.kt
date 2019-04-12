@@ -7,10 +7,10 @@ import dk.nodes.template.App
 import dk.nodes.template.injection.modules.AppModule
 import dk.nodes.template.injection.modules.ExecutorModule
 import dk.nodes.template.injection.modules.InteractorModule
-import dk.nodes.template.injection.modules.RestModule
 import dk.nodes.template.injection.modules.RestRepositoryBinding
-import dk.nodes.template.injection.modules.StorageModule
+import dk.nodes.template.injection.modules.StorageBindingModule
 import dk.nodes.template.presentation.injection.ViewModelBuilder
+import techprague.nodes.dk.data.injection.RestModule
 import javax.inject.Singleton
 
 @Component(
@@ -22,7 +22,7 @@ import javax.inject.Singleton
         InteractorModule::class,
         RestModule::class,
         RestRepositoryBinding::class,
-        StorageModule.StorageBindingModule::class
+        StorageBindingModule::class
     ]
 )
 @Singleton

@@ -66,6 +66,7 @@ object Libs {
 
             private const val version = "2.0.0"
             const val runtime = "androidx.lifecycle:lifecycle-runtime:$version"
+            const val common = "androidx.lifecycle:lifecycle-common-java8:$version"
             const val compiler = "androidx.lifecycle:lifecycle-compiler:$version"
         }
 

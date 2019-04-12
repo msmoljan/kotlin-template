@@ -16,14 +16,16 @@ abstract class AppModule {
     @Binds
     abstract fun bindAppInitalizer(initializer: AppInitializerImpl): AppInitializer
 
-    @Provides
-    @Named("API_KEY")
-    fun provideApiKey(): String {
-        return BuildConfig.API_KEY
-    }
-
     @Module
     companion object {
+
+        @JvmStatic
+        @Provides
+        @Named("API_KEY")
+        fun provideApiKey(): String {
+            return BuildConfig.API_KEY
+        }
+
         @JvmStatic
         @Provides
         fun provideContext(application: App): Context = application.applicationContext

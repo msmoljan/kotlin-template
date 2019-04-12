@@ -15,6 +15,5 @@ class MainActivityViewModel @Inject constructor(
     val viewState: LiveData<MainActivityViewState> = _viewState
 
     fun fetchPosts() = scope.launchInteractor(getMatchByIdInterctor, 4354152067L) {
-
     }
 }
