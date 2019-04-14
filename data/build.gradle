@@ -1,6 +1,8 @@
 apply plugin: 'kotlin'
 
 dependencies {
+
+    implementation project(':api')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation("com.squareup.retrofit2:retrofit:${versions.retrofit}")
     implementation("com.squareup.retrofit2:converter-gson:${versions.retrofit}") {

@@ -1,4 +1,4 @@
-import dk.template.buildsrc.Libs
+import dk.template.buildsrc.*
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'

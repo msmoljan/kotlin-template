@@ -7,7 +7,7 @@ import dk.nodes.template.App
 import dk.nodes.template.injection.modules.AppModule
 import dk.nodes.template.injection.modules.ExecutorModule
 import dk.nodes.template.injection.modules.InteractorModule
-import dk.nodes.template.injection.modules.RestRepositoryBinding
+import dk.nodes.template.injection.RepositoryBinding
 import dk.nodes.template.injection.modules.StorageBindingModule
 import dk.nodes.template.presentation.injection.ViewModelBuilder
 import techprague.nodes.dk.data.injection.RestModule
@@ -21,7 +21,7 @@ import javax.inject.Singleton
         ExecutorModule::class,
         InteractorModule::class,
         RestModule::class,
-        RestRepositoryBinding::class,
+        RepositoryBinding::class,
         StorageBindingModule::class
     ]
 )
