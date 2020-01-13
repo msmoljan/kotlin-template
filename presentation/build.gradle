@@ -36,8 +36,8 @@ android {
 }
 
 dependencies {
-    implementation project(':domain-old')
-    implementation project(':data')
+    implementation project(':domain')
+
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
     implementation "androidx.arch.core:core-common:$versions.archCore"
@@ -53,11 +53,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
 //    implementation "dk.nodes.arch:base:${versions.nodes_arch}"
+
     implementation "androidx.core:core-ktx:${versions.ktx}"
-    implementation "com.google.dagger:dagger-android:${versions.dagger}"
-    implementation "com.google.dagger:dagger-android-support:${versions.dagger}"
-    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
-    kapt "com.google.dagger:dagger-android-processor:${versions.dagger}"
     implementation "dk.nodes.nstack:nstack-kotlin:$versions.nstack"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"

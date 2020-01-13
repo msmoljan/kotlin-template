@@ -1,4 +1,4 @@
-include ':app', ':domain'
+include ':app', ':domain', ':dependency-injection'
 include ':domain-old'
 include ':presentation'
 include ':data'
