@@ -1,4 +1,4 @@
-include ':app'
-include ':domain'
+include ':app', ':domain'
+include ':domain-old'
 include ':presentation'
 include ':data'
