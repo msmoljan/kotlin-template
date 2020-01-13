@@ -9,7 +9,7 @@
         tools:node="replace" />
 
     <application
-        android:name="dk.nodes.template.App"
+        android:name="dk.nodes.template.app_context.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${APP_NAME}"
