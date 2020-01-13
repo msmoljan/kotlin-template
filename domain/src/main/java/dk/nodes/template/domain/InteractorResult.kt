@@ -1,4 +1,4 @@
-package dk.nodes.template.domain.interactors
+package dk.nodes.template.domain
 
 sealed class InteractorResult<out T> {
 

@@ -1,4 +1,4 @@
-package dk.nodes.template.domain.interactors
+package dk.nodes.template.domain
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -10,7 +10,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.coroutines.CoroutineContext
 
-interface ResultInteractor<I, O> : Interactor<I, CompleteResult<O>>
+interface ResultInteractor<I, O> :
+    Interactor<I, CompleteResult<O>>
 
 interface FlowInteractor<I, O> : NoOutputInteractor<I> {
     fun flow(): Flow<O>

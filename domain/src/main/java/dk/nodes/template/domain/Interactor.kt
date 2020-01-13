@@ -1,4 +1,4 @@
-package dk.nodes.template.domain.interactors
+package dk.nodes.template.domain
 
 interface Interactor<I, O> {
     suspend operator fun invoke(input: I): O
