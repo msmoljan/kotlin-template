@@ -1,3 +1,4 @@
+include ':nstack'
 include ":app", ":app-context"
 include ":domain"
 include ":dependency-injection"

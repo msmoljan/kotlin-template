@@ -2,13 +2,6 @@ apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-kapt"
 apply plugin: "kotlin-android-extensions"
-apply plugin: "dk.nstack.translation.plugin"
-
-translation {
-    appId = keys.appId
-    apiKey = keys.apiKey
-    acceptHeader = keys.acceptHeader
-}
 
 android {
     compileSdkVersion sdks.compileSdkVersion
@@ -56,7 +49,6 @@ dependencies {
 //    implementation "dk.nodes.arch:base:${versions.nodes_arch}"
 
     implementation "androidx.core:core-ktx:${versions.ktx}"
-    implementation "dk.nodes.nstack:nstack-kotlin:$versions.nstack"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
     testImplementation "junit:junit:4.12"

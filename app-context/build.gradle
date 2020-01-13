@@ -19,6 +19,23 @@ android {
         }
     }
 
+    flavorDimensions "default"
+
+    productFlavors {
+
+        staging {
+            dimension "default"
+
+            buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com\""
+        }
+
+        production {
+            dimension "default"
+
+            buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com\""
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

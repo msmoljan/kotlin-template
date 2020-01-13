@@ -47,31 +47,32 @@ android {
     */
 
     buildTypes {
+
         debug {
             // uncomment the following line if you add a flavorbased signingConfig for debug builds
             //signingConfig null
         }
+
         release {
-            buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 
     productFlavors {
+
         staging {
             dimension "default"
             applicationIdSuffix ".staging"
             //signingConfig signingConfigs.staging
             manifestPlaceholders = [APP_NAME: "KotlinTemplateStaging"]
-            buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com\""
         }
+
         production {
             dimension "default"
             applicationIdSuffix ".production"
             //signingConfig signingConfigs.production
             manifestPlaceholders = [APP_NAME: "KotlinTemplate"]
-            buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com\""
         }
     }
 
@@ -117,7 +118,6 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:${versions.okhttp}"
     implementation("com.squareup.okhttp3:logging-interceptor:${versions.okhttp}")
 
-    implementation "dk.nodes.nstack:nstack-kotlin:${versions.nstack}"
 //    implementation "dk.nodes.arch:base:${versions.nodes_arch}"
 
     // Testing

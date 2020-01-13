@@ -17,21 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/NoToolbarAppTheme">
 
-        <!-- nstack app id and key from build.gradle manifest placeholder -->
-        <meta-data
-            android:name="dk.nodes.nstack.appId"
-            android:value="${appId}"
-            tools:replace="android:value" />
-        <meta-data
-            android:name="dk.nodes.nstack.apiKey"
-            android:value="${apiKey}"
-            tools:replace="android:value" />
-
-        <meta-data
-            android:name="dk.nodes.nstack.env"
-            android:value="staging"
-            tools:replace="android:value" />
-
         <activity android:name="dk.nodes.template.presentation.ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

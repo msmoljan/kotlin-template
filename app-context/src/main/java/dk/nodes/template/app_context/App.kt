@@ -10,6 +10,10 @@ import javax.inject.Provider
 
 class App : Application(), HasAndroidInjector {
 
+    companion object {
+        const val API_URL = BuildConfig.API_URL
+    }
+
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 

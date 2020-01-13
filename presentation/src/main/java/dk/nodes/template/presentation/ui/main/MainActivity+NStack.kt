@@ -3,7 +3,6 @@ package dk.nodes.template.presentation.ui.main
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.lifecycleScope
 import dk.nodes.nstack.kotlin.NStack
 import dk.nodes.nstack.kotlin.models.AppUpdate
 import dk.nodes.nstack.kotlin.models.AppUpdateState
@@ -12,8 +11,7 @@ import dk.nodes.nstack.kotlin.models.RateReminder
 import dk.nodes.nstack.kotlin.models.Result
 import dk.nodes.nstack.kotlin.models.state
 import dk.nodes.nstack.kotlin.models.update
-import dk.nodes.template.presentation.nstack.Translation
-import kotlinx.coroutines.launch
+import dk.nodes.template.nstack.Translation
 
 fun MainActivity.setupNStack() {
     lifecycleScope.launch {
@@ -60,7 +58,7 @@ fun MainActivity.showMessageDialog(message: Message) {
     AlertDialog.Builder(this)
         .setMessage(message.message)
         .setCancelable(false)
-        .setPositiveButton(Translation.defaultSection.ok) { dialog, _ ->
+        .setPositiveButton(dk.nodes.template.nstack.Translation.defaultSection.ok) { dialog, _ ->
             NStack.messageSeen(message)
             dialog.dismiss()
         }

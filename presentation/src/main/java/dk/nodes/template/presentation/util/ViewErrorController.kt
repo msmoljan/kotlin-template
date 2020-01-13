@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
-import dk.nodes.template.presentation.nstack.Translation
+import dk.nodes.template.nstack.Translation
 import dk.nodes.template.repositories.RepositoryException
 import javax.inject.Inject
 
@@ -14,7 +14,7 @@ class ViewErrorController @Inject constructor(val context: Context) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle(error.title)
         builder.setMessage(error.message)
-        builder.setPositiveButton(Translation.defaultSection.ok) { _, _ ->
+        builder.setPositiveButton(dk.nodes.template.nstack.Translation.defaultSection.ok) { _, _ ->
             isShowingError = false
         }
         builder.setOnDismissListener {
@@ -31,9 +31,9 @@ class ViewErrorController @Inject constructor(val context: Context) {
 
     fun showErrorSnackbar(view: View, error: ViewError, showAction: Boolean = false, dismissAction: (() -> Unit)? = null) {
         val showLength = if (showAction) Snackbar.LENGTH_INDEFINITE else Snackbar.LENGTH_LONG
-        val snackbar = Snackbar.make(view, error.message ?: Translation.error.errorRandom, showLength)
+        val snackbar = Snackbar.make(view, error.message ?: dk.nodes.template.nstack.Translation.error.errorRandom, showLength)
         if (showAction) {
-            snackbar.setAction(Translation.defaultSection.ok) {
+            snackbar.setAction(dk.nodes.template.nstack.Translation.defaultSection.ok) {
                 isShowingError = false
                 dismissAction?.invoke()
             }
@@ -53,29 +53,29 @@ class ViewErrorController @Inject constructor(val context: Context) {
                     when (throwable.code) {
                         401, 403 -> {
                             ViewError(
-                                    title = Translation.error.errorTitle,
-                                    message = Translation.error.authenticationError,
+                                    title = dk.nodes.template.nstack.Translation.error.errorTitle,
+                                    message = dk.nodes.template.nstack.Translation.error.authenticationError,
                                     code = -1
                             )
                         }
                         402, in 404..500 -> {
                             ViewError(
-                                    title = Translation.error.errorTitle,
-                                    message = Translation.error.unknownError,
+                                    title = dk.nodes.template.nstack.Translation.error.errorTitle,
+                                    message = dk.nodes.template.nstack.Translation.error.unknownError,
                                     code = -1
                             )
                         }
                         in 500..600 -> {
                             ViewError(
-                                    title = Translation.error.errorTitle,
-                                    message = Translation.error.unknownError,
+                                    title = dk.nodes.template.nstack.Translation.error.errorTitle,
+                                    message = dk.nodes.template.nstack.Translation.error.unknownError,
                                     code = -1
                             )
                         }
                         else -> {
                             ViewError(
-                                    title = Translation.error.errorTitle,
-                                    message = Translation.error.unknownError,
+                                    title = dk.nodes.template.nstack.Translation.error.errorTitle,
+                                    message = dk.nodes.template.nstack.Translation.error.unknownError,
                                     code = -1
                             )
                         }
@@ -83,8 +83,8 @@ class ViewErrorController @Inject constructor(val context: Context) {
                 }
                 else -> {
                     ViewError(
-                            title = Translation.error.errorTitle,
-                            message = Translation.error.connectionError,
+                            title = dk.nodes.template.nstack.Translation.error.errorTitle,
+                            message = dk.nodes.template.nstack.Translation.error.connectionError,
                             code = -1
                     )
                 }
