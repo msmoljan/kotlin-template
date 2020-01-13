@@ -1,5 +1,5 @@
-include ':app', ':app-context'
-include ':domain'
-include ':dependency-injection'
-include ':presentation'
-include ':data'
+include ":app", ":app-context"
+include ":domain"
+include ":dependency-injection"
+include ":presentation"
+include ":data"

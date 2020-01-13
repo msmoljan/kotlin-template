@@ -1,8 +1,8 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'dk.nstack.translation.plugin'
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "dk.nstack.translation.plugin"
 
 translation {
     appId = keys.appId
@@ -22,7 +22,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
 
@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation project(':domain')
+    implementation project(":domain")
 
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
@@ -59,7 +59,7 @@ dependencies {
     implementation "dk.nodes.nstack:nstack-kotlin:$versions.nstack"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
-    testImplementation 'junit:junit:4.12'
+    testImplementation "junit:junit:4.12"
     implementation "androidx.core:core-ktx:${versions.ktx}"
     implementation "com.jakewharton.timber:timber:${versions.timber}"
 
